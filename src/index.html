@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>EcoWarms - Mudanças Climáticas</title>
+</head>
+<body class="font-texto">
+   <div class="w-full h-screen bg-black bg-initial bg-cover bg-bottom">
+        <header class="flex justify-between items-center pt-10 px-20">
+            <a href="index.html"><h1 class="uppercase font-logo font-bold text-white text-3xl">Eco<br>Warms</h1></a>
+
+            <div class="flex w-96 rounded-3xl bg-white">
+                <input 
+                type="search" 
+                name="search" 
+                id="search" 
+                placeholder="Verificar clima da sua cidade"
+                autocomplete="off"
+                class="w-full border-none bg-transparent px-6 py-3 text-gray-900 outline-none">
+
+                <button class="flex items-center px-3 py-2" >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#B1B1B1" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                      </svg> 
+                </button>
+            </div>
+
+            <nav>
+                <ul class="flex items-center gap-6">
+                    <li class="relative text-2xl">
+                        <button class="text-white flex font-links items-center" id="dropDown">
+                            Seções 
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </button>
+
+                        <div class="absolute w-full hidden bg- text-white text-lg py-2" id="menuDrop">
+                            <a class="w-full block text-center text-lg text-white py-1 rounded hover:bg-gray-900 duration-200" href="#">Sobre nós</a>
+                            <a class="w-full block text-center text-lg text-white py-1 rounded hover:bg-gray-900  duration-200" href="#">Contato</a>
+                            <a class="w-full block text-center text-lg text-white py-1 rounded hover:bg-gray-900  duration-200" href="#">Impacto</a>
+                        </div>
+                    </li>
+                    
+                    <li class="relative text-2xl">
+                        <button class="text-white flex font-links items-center" id="dropDown">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802" />
+                            </svg>
+
+                            pt-br
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
+                                <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
+                            </svg>
+                        </button>
+
+                        <div class="absolute w-full hidden bg- text-white text-lg py-2" id="menuDrop">
+                            <a class="w-full block text-center text-lg text-white py-1 rounded hover:bg-gray-900 duration-200" href="#">en-US</a>
+                            <a class="w-full block text-center text-lg text-white py-1 rounded hover:bg-gray-900  duration-200" href="#">es-ES</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button class="btnPrimary text-white text-lg rounded-lg duration-200 hover:bg-black">Login</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <script src="./app.js"></script>
+</body> 
+</html>
