@@ -9,7 +9,7 @@ module.exports = {
       fontFamily: {
         "logo": ["Montserrat", 'sans-serif'],
         "texto": ["Roboto", 'sans-serif'],
-        "links": ["Poppins", 'sans-serif'],
+        "links": ["Poppins", 'sans-serif']
       },
     }
   },
