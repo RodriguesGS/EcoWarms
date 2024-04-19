@@ -4,6 +4,7 @@
 
 body {
     background: #000;
+    color: #111;
 }
 
 .bg-initial img {
@@ -13,4 +14,8 @@ body {
 .btnPrimary {
     background-color: #1b1b1bc0;
     padding: 5px 30px;
+}
+
+.modal-open {
+    overflow: hidden;
 }
