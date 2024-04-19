@@ -20,11 +20,24 @@
                 autocomplete="off"
                 class="w-full border-none bg-transparent px-6 py-3 text-gray-900 outline-none">
 
-                <button class="flex items-center px-3 py-2" >
+                <button id="openModal" class="flex items-center px-3 py-2" >
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#B1B1B1" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                       </svg> 
                 </button>
+            </div>
+
+            <div id="modal" class="fixed inset-0 z-50 hidden">
+                <div class="flex items-center justify-center min-h-screen bg-gray-500 bg-opacity-75 transition-opacity">
+                    <div class="flex flex-col items-center bg-white p-20 rounded w-2/3">
+                        <button id="closeModal">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                          
+                    </div>
+                </div>  
             </div>
 
             <nav>
@@ -73,7 +86,7 @@
         </header>
 
         <div class="flex text-white items-center flex-col pt-32 text-center">
-            <h1 class="text-5xl font-bold font-texto">Mudanças <br> Climáticas</h1>
+            <h1 class="text-5xl font-bold font-texto pb-3">Mudanças <br> Climáticas</h1>
             <p class="text-1xl font-texto">Conectando mentes, inspirando ações: <br> Juntos, moldamos o futuro do nosso planeta</p>
         </div>
     </div>

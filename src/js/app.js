@@ -21,3 +21,13 @@ document.addEventListener("click", (e) => {
         }
     })
 })
+
+// Modal
+
+document.querySelector("#openModal").addEventListener("click", () => {
+    document.querySelector("#modal").classList.remove("hidden")
+})
+
+document.querySelector("#closeModal").addEventListener("click", () => {
+    document.querySelector("#modal").classList.add("hidden")
+})
