@@ -19,3 +19,11 @@ body {
 .modal-open {
     overflow: hidden;
 }
+
+#vital::after {
+    content: "";
+    display: block;
+    width: 170px;
+    height: 2px;
+    background-color: #fff;
+}

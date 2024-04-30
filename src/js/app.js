@@ -94,3 +94,28 @@ inputSearh.addEventListener("keyup", e => {
         showWeather(cityName)
     }
 })
+
+
+// Carrossel
+
+const prevBtn = document.querySelector("#prev")
+const nextButton = document.querySelector("#next");
+const carrossel = document.querySelector(".carrossel")
+const cardTam = carrossel.querySelector(".carrossel-card").offsetWidth
+const cardMax = 3
+let scrollPos = 0
+
+const carrosselTam = cardTam * cardMax
+
+carrossel.style.width = `${carouselTam}px`
+
+prevBtn.addEventListener("click", () => {
+    scrollPos -= cardTam * cardMax
+
+    if (scrollPos < 0) scrollPos = 0
+
+    carrossel.scrollTo({
+        left:scrollPos,
+        behavior: "smooth"
+    })
+})
