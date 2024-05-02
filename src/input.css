@@ -27,3 +27,11 @@ body {
     height: 2px;
     background-color: #fff;
 }
+
+#sect {
+    width: 1000px;
+}
+
+.carrossel-card  {
+    flex: 0 0 auto;
+}

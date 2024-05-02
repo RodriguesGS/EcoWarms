@@ -128,22 +128,21 @@
         </div>
     </div>
     
-    <div class="text-white px-20 py-10">
-        <section class="pt-3">
-            <h2 id="vital" class="font-texto font-texto-regular text-4xl">Dados Vitais</h2>
+    <div class="text-white py-10">
+        <h2 id="vital" class="px-20 font-texto font-texto-regular text-4xl">Dados Vitais</h2>
 
-            <div class="carrossel flex overflow-hidden">
-                <button id="prev" class="pr-6 pt-12">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                    </svg>                  
-                </button>
+        <section id="sect" class="pt-3 flex justify-center mx-auto">
+            <button id="prev" class="mt-12 mr-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>                  
+            </button>
 
+            <div class="carrossel flex overflow-x-hidden py-10">
                 <div class="carrossel-card mt-12 border-t-2 border-gray-400 font-texto">
-                    <h3 class="text-xl pt-2">Temperatura Global</h3>
+                    <h3 class="text-xl pt-4">Temperatura Global</h3>
 
-                    <div class="flex items-center pt-3">
-                        
+                    <div class="flex items-center w-60 pt-2"> 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-red-500">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
                         </svg>
@@ -154,9 +153,9 @@
                 </div>
 
                 <div class="carrossel-card ml-12 pr-12 mt-12 border-t-2 border-gray-400 font-texto">
-                    <h3 class="text-xl pt-2">Dióxido de Carbono (CO2)</h3>
+                    <h3 class="text-xl pt-4">Dióxido de Carbono (CO2)</h3>
 
-                    <div class="flex flex-wrap pt-3 "> 
+                    <div class="flex flex-wrap w-60 pt-2"> 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-red-500">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
                         </svg>
@@ -171,74 +170,75 @@
                 </div>
 
                 <div class="carrossel-card ml-12 pr-12 mt-12 border-t-2 border-gray-400 font-texto">
-                    <h3 class="text-xl pt-2">Nível do mar</h3>
+                    <h3 class="text-xl pt-4">Nível do mar</h3>
 
-                    <div class="flex flex-wrap pt-3 "> 
+                    <div class="flex flex-wrap w-60 pt-2"> 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-red-500">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
                         </svg>
                        
                         <p class="text-4xl font-white">4</p>
                         <span class="pl-2 block text-xs text-gray-500 relative">
-                            polegadas desde janeiro
+                            polegadas desde janeiro <br> de 1963
                             <span class="absolute ml-2" style="content: '\\00a0'""></span>
                         </span>
                     </div>                      
                 </div>
 
-                <div class="carrossel-card mt-12 border-t-2 border-gray-400 font-texto">
-                    <h3 class="text-xl pt-2">Temperatura Global</h3>
-
-                    <div class="flex items-center pt-3">
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-red-500">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
-                        </svg>
-                       
-                        <p class="text-4xl font-white">1.4</p>
-                        <span class=" after:content-['°'] after:ml-2 block text-4xl text-gray-500"></span> 
-                    </div>                      
-                </div>
-
                 <div class="carrossel-card ml-12 pr-12 mt-12 border-t-2 border-gray-400 font-texto">
-                    <h3 class="text-xl pt-2">Dióxido de Carbono (CO2)</h3>
+                    <h3 class="text-xl pt-4">Metano</h3>
 
-                    <div class="flex flex-wrap pt-3 "> 
+                    <div class="flex flex-wrap w-60 pt-2"> 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-red-500">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
                         </svg>
                        
-                        <p class="text-4xl font-white">425</p>
+                        <p class="text-4xl font-white">1932</p>
                         <span class="pl-2 block text-xs text-gray-500 relative">
-                            partes por milhão
-                            <span class="absolute ml-2" style="content: '\\00a0'"></span>
-                        </span>
-                        
-                    </div>                      
-                </div>
-
-                <div class="carrossel-card ml-12 pr-12 mt-12 border-t-2 border-gray-400 font-texto">
-                    <h3 class="text-xl pt-2">Nível do mar</h3>
-
-                    <div class="flex flex-wrap pt-3 "> 
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-red-500">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
-                        </svg>
-                       
-                        <p class="text-4xl font-white">4</p>
-                        <span class="pl-2 block text-xs text-gray-500 relative">
-                            polegadas desde janeiro
+                            partes por bilhão
                             <span class="absolute ml-2" style="content: '\\00a0'""></span>
                         </span>
                     </div>                      
                 </div>
 
-                <button id="next" class="pl-6 pt-12">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                    </svg>                                      
-                </button>
+                <div class="carrossel-card ml-12 pr-12 mt-12 border-t-2 border-gray-400 font-texto">
+                    <h3 class="text-xl pt-4">Mantos de gelo</h3>
+
+                    <div class="flex flex-wrap w-60 pt-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-red-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
+                          </svg>
+                       
+                        <p class="text-4xl font-white">424</p>
+                        <span class="pl-2 block text-xs text-gray-500 relative">
+                            bilhões de toneladas<br> métricas por ano
+                            <span class="absolute ml-2" style="content: '\\00a0'""></span>
+                        </span>
+                    </div>                      
+                </div>
+
+                <div class="carrossel-card ml-12 pr-12 mt-12 border-t-2 border-gray-400 font-texto">
+                    <h3 class="text-xl pt-4">Aquecimento do oceano</h3>
+
+                    <div class="flex flex-wrap w-60 pt-2"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-red-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
+                        </svg>
+                       
+                        <p class="text-4xl font-white">360</p>
+                        <span class="pl-2 block text-xs text-gray-500 relative">
+                            zettajoules desde 1955
+                            <span class="absolute ml-2" style="content: '\\00a0'""></span>
+                        </span>
+                    </div>                      
+                </div>
             </div>
+
+            <button id="next" class="pl-6 mt-12">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>                                      
+            </button>
         </section>     
     </div>
 

@@ -98,24 +98,32 @@ inputSearh.addEventListener("keyup", e => {
 
 // Carrossel
 
-const prevBtn = document.querySelector("#prev")
-const nextButton = document.querySelector("#next");
+const prevBTN = document.querySelector("#prev")
+const nextBTN = document.querySelector("#next")
 const carrossel = document.querySelector(".carrossel")
-const cardTam = carrossel.querySelector(".carrossel-card").offsetWidth
-const cardMax = 3
+const cardCarrossel = document.querySelectorAll(".carrossel-card")
 let scrollPos = 0
 
-const carrosselTam = cardTam * cardMax
+prevBTN.addEventListener("click", () => {
+    scrollPos -= 2000;
 
-carrossel.style.width = `${carouselTam}px`
-
-prevBtn.addEventListener("click", () => {
-    scrollPos -= cardTam * cardMax
-
-    if (scrollPos < 0) scrollPos = 0
+    scrollPos = (scrollPos < 0) ? 0 : scrollPos
 
     carrossel.scrollTo({
-        left:scrollPos,
+        left: scrollPos,
         behavior: "smooth"
     })
+})
+
+nextBTN.addEventListener("click", () => {
+    scrollPos += 960
+
+    if (scrollPos > carrossel.scrollWidth - carrossel.offsetWidth) {
+        scrollPos = carrossel.scrollWidth - carrossel.offsetWidth;
+    }
+
+    carrossel.scrollTo({
+        left: scrollPos,
+        behavior: "smooth"
+    });
 })
