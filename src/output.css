@@ -631,14 +631,6 @@ video {
   height: 100vh;
 }
 
-.h-10 {
-  height: 2.5rem;
-}
-
-.h-11 {
-  height: 2.75rem;
-}
-
 .max-h-10 {
   max-height: 2.5rem;
 }
@@ -655,6 +647,10 @@ video {
   width: 3rem;
 }
 
+.w-52 {
+  width: 13rem;
+}
+
 .w-6 {
   width: 1.5rem;
 }
@@ -669,14 +665,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-10 {
-  width: 2.5rem;
-}
-
-.w-11 {
-  width: 2.75rem;
 }
 
 .max-w-md {
@@ -719,20 +707,8 @@ video {
   gap: 1.5rem;
 }
 
-.overflow-hidden {
-  overflow: hidden;
-}
-
 .overflow-x-hidden {
   overflow-x: hidden;
-}
-
-.break-words {
-  overflow-wrap: break-word;
-}
-
-.break-all {
-  word-break: break-all;
 }
 
 .rounded {
@@ -822,10 +798,6 @@ video {
   padding: 2rem;
 }
 
-.p-2 {
-  padding: 0.5rem;
-}
-
 .px-20 {
   padding-left: 5rem;
   padding-right: 5rem;
@@ -859,6 +831,11 @@ video {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-3 {
@@ -1025,8 +1002,22 @@ body {
   width: 1000px;
 }
 
-.carrossel-card  {
+.carrossel-card {
   flex: 0 0 auto;
+  position: relative;
+}
+
+.carrossel-card::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.carrossel-card:hover::before {
+  width: 100%;
 }
 
 .after\:ml-2::after {

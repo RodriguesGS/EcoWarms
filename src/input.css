@@ -32,6 +32,20 @@ body {
     width: 1000px;
 }
 
-.carrossel-card  {
+.carrossel-card {
     flex: 0 0 auto;
+    position: relative;
+}
+
+.carrossel-card::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px; 
+    background-color: #fff;
+    transition: 0.3s ease-in-out; 
+}
+
+.carrossel-card:hover::before {
+    width: 100%; 
 }
