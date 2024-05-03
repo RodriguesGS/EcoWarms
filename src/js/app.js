@@ -95,7 +95,6 @@ inputSearh.addEventListener("keyup", e => {
     }
 })
 
-
 // Carrossel
 
 const prevBTN = document.querySelector("#prev")
@@ -127,15 +126,3 @@ nextBTN.addEventListener("click", () => {
         behavior: "smooth"
     });
 })
-
-new Vue({
-    el: '#app',
-    data: {
-      currentPage: 'pages/login.html'
-    },
-    methods: {
-      navigate(page) {
-        this.currentPage = page;
-      }
-    }
-  });
