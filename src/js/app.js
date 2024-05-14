@@ -1,3 +1,19 @@
+// Login
+
+document.querySelector("#link-register").addEventListener('click', () => {
+    document.querySelector(".login").classList.remove("flex")
+    document.querySelector(".login").classList.add("hidden")
+    document.querySelector(".register").classList.add("flex")
+    document.querySelector(".register").classList.remove("hidden")
+})
+
+document.querySelector("#link-login").addEventListener('click', () => {
+    document.querySelector(".login").classList.remove("hidden")
+    document.querySelector(".login").classList.add("flex")
+    document.querySelector(".register").classList.add("hidden")
+    document.querySelector(".register").classList.remove("flex")
+})
+
 // Função dropDown
 
 const dropDown = document.querySelectorAll("#dropDown");
@@ -129,3 +145,4 @@ nextBTN.addEventListener("click", () => {
 
 
 // Login
+
