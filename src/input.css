@@ -52,6 +52,7 @@ body {
 
 .login, .register {
     max-width: 500px;
+    animation: animateLogin 1s;
 }
 
 .login > input:focus,
@@ -87,3 +88,14 @@ body {
     text-decoration: underline;
 }
 
+@keyframes animateLogin {
+    from {
+        opacity: 0;
+        transform: translate3d(-100px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
