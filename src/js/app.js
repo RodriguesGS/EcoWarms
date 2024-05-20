@@ -1,148 +1,79 @@
-// Login
+import { showLogin, showRegister } from "./changeLogin.js";
+import { toggleDrop } from "./dropDown.js";
+import { closeModal } from "./modal.js";
+import { showWeather } from "./weather.js";
+import { scrollCarrossel } from "./carrossel.js";
 
-document.querySelector("#link-register").addEventListener('click', () => {
-    document.querySelector(".login").classList.remove("flex")
-    document.querySelector(".login").classList.add("hidden")
-    document.querySelector(".register").classList.add("flex")
-    document.querySelector(".register").classList.remove("hidden")
-})
+// Troca de tela do login
 
-document.querySelector("#link-login").addEventListener('click', () => {
-    document.querySelector(".login").classList.remove("hidden")
-    document.querySelector(".login").classList.add("flex")
-    document.querySelector(".register").classList.add("hidden")
-    document.querySelector(".register").classList.remove("flex")
-})
+if (window.location.pathname.includes('login.html')) {
+    document.querySelector("#link-register").addEventListener('click', showRegister);
+    document.querySelector("#link-login").addEventListener('click', showLogin);
+};
 
-// Função dropDown
+// Página Principal
 
-const dropDown = document.querySelectorAll("#dropDown");
+if (window.location.pathname.includes('index.html')) {
 
-dropDown.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        const dropDownMenu = btn.nextElementSibling
+    // Função dropDown
 
-        dropDownMenu.classList.toggle("hidden");
-    })
-})
+    const dropDown = document.querySelectorAll("#dropDown");
 
-// Fechar DropDown com clique em qualquer lugar da tela
-
-document.addEventListener("click", (e) => {
     dropDown.forEach((btn) => {
-        const dropDownMenu = btn.nextElementSibling
-
-        if (!btn.contains(e.target) && !dropDownMenu.contains(e.target)) {
-            dropDownMenu.classList.add('hidden');
-        }
-    })
-})
-
-// Modal
-
-document.querySelector("#closeModal").addEventListener("click", () => {
-    document.querySelector("#modal").classList.add("hidden")
-    document.body.classList.toggle("modal-open")
-})
-
-// API weather
-
-const API_KEY = "f68bb9bcd75825343655d1dc14d621ab"
-const APICountryURL = "https://countryflagsapi.com/png/";
-
-const inputSearh = document.querySelector("#search")
-const citySearch = document.querySelector("#searchAPI")
-
-const city = document.querySelector("#city")
-const temp = document.querySelector("#temperature span")
-const weatherImg = document.querySelector("#weatherImg")
-const countryImg = document.querySelector("#country");
-const humidity = document.querySelector("#humidity span");
-const wind = document.querySelector("#wind span");
-
-const getWeatherData = async (cityName) => {
-    const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${API_KEY }&lang=pt_br`;
-
-    const res = await fetch(apiWeatherURL);
-    const data = await res.json();
-
-    return data;
-}
-
-const showWeather = async (cityName) => {
-    const data = await getWeatherData(cityName)
-
-    city.innerText = data.name
-    temp.innerText = parseInt(data.main.temp)
-    weatherImg.setAttribute(
-        "src",
-        `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
-    );
-
-    countryImg.setAttribute("src", `https://flagsapi.com/${data.sys.country}/flat/64.png`);
-
-    humidity.innerText = `${data.main.humidity}%`
-    wind.innerText = `${data.wind.speed} km/h`
-}
-
-citySearch.addEventListener("click", async (e) => {
-    const cityName = e.target.value
-
-    document.querySelector("#modal").classList.remove("hidden")
-
-    document.body.classList.toggle("modal-open")
-    
-    inputSearh.value = ""
-
-    showWeather(cityName)
-})
-
-inputSearh.addEventListener("keyup", e => {
-    if (e.code === "Enter") {
-        const cityName = e.target.value
-
-        document.querySelector("#modal").classList.remove("hidden")
-
-        inputSearh.value = ""
-
-        document.body.classList.toggle("modal-open")
-
-        showWeather(cityName)
-    }
-})
-
-// Carrossel
-
-const prevBTN = document.querySelector("#prev")
-const nextBTN = document.querySelector("#next")
-const carrossel = document.querySelector(".carrossel")
-const cardCarrossel = document.querySelectorAll(".carrossel-card")
-let scrollPos = 0
-
-prevBTN.addEventListener("click", () => {
-    scrollPos -= 2000;
-
-    scrollPos = (scrollPos < 0) ? 0 : scrollPos
-
-    carrossel.scrollTo({
-        left: scrollPos,
-        behavior: "smooth"
-    })
-})
-
-nextBTN.addEventListener("click", () => {
-    scrollPos += 960
-
-    if (scrollPos > carrossel.scrollWidth - carrossel.offsetWidth) {
-        scrollPos = carrossel.scrollWidth - carrossel.offsetWidth;
-    }
-
-    carrossel.scrollTo({
-        left: scrollPos,
-        behavior: "smooth"
+        btn.addEventListener("click", () => toggleDrop(btn));
     });
-})
 
+    document.addEventListener("click", (e) => {
+        dropDown.forEach((btn) => {
+            const dropDownMenu = btn.nextElementSibling;
+            if (!btn.contains(e.target) && !dropDownMenu.contains(e.target)) {
+                dropDownMenu.classList.add("hidden");
+            };
+        });
+    });
 
-// Login
+    // Fechar modal
 
+    document.querySelector("#closeModal").addEventListener("click", closeModal);
+
+    // API Weather
+
+    const inputSearh = document.querySelector("#search");
+    const citySearch = document.querySelector("#searchAPI");
+
+    citySearch.addEventListener("click", async (e) => {
+        const cityName = e.target.value;
+
+        document.querySelector("#modal").classList.remove("hidden");
+
+        document.body.classList.toggle("modal-open");
+        
+        inputSearh.value = "";
+
+        showWeather(cityName);
+    });
+
+    inputSearh.addEventListener("keyup", e => {
+        if (e.code === "Enter") {
+            const cityName = e.target.value;
+
+            document.querySelector("#modal").classList.remove("hidden");
+
+            inputSearh.value = "";
+
+            document.body.classList.toggle("modal-open");
+
+            showWeather(cityName);
+        };
+    });
+
+    // Carrossel
+
+    document.querySelector("#prev").addEventListener("click", () => {
+        scrollCarrossel(-2000);
+    });
+
+    document.querySelector("#next").addEventListener("click", () => {
+        scrollCarrossel(960);
+    });
+}

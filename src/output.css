@@ -1086,7 +1086,8 @@ body {
   max-width: 500px;
 }
 
-input:focus {
+.login > input:focus,
+.reguster > input:focus {
   background-color: #2c2c2c;
 }
 
