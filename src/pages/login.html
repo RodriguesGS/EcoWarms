@@ -8,84 +8,93 @@
     <title>Login</title>
 </head>
 <body id="login-page">
-    <div class="login mt-28 text-white flex mx-auto my-0 bg-gray-950 justify-center items-center text-center rounded-lg">
-        <div class="login-data p-8">
-            <form action="">
-                <h2 class="font-links text-4xl font-bold">Login</h2>
-                <p class="text-xs pt-2 text-gray-300">Se você tiver algum login, por favor insira abaixo</p>
+    <div class="w-full h-screen bg-black bg-initial bg-fixed bg-cover bg-bottom pt-10">
+        <a href="../index.html" class="fixed top-15 left-20">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="#fff" class="w-10 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+            </svg>              
+        </a>
+          
 
-                <input type="text" 
-                name="userLogin" 
-                id="userLogin"
-                placeholder="Usuário"
-                autocomplete="off"
-                class="w-96 border-none rounded-md px-3 py-4 bg-gray-800 outline-none mt-8">
-
-                <input type="password" 
-                name="passwordLogin" 
-                id="passwordLogin"
-                placeholder="Senha"
-                autocomplete="off"
-                class="w-96 border-none rounded-md px-3 py-4 bg-gray-800 outline-none mt-6">
-
-                <div class="ml-auto text-end pt-3 px-8">
-                    <a href="#" id="qstPass" class="text-xs text-gray-300">Esqueceu a senha?</a>
-                </div>
-
-                <button class="btnSecondary mt-6 text-xl">Login</button>
-
-                <div class="flex justify-between mt-8 px-8">
-                    <span class="text-xs text-gray-500">Ainda não tem uma conta?</span>
-                    <a id="link-register" href="#" class="text-sm">Registre-se</a>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <div class="register mt-3 text-white hidden mx-auto my-0 bg-gray-950 justify-center items-center text-center rounded-lg">
-        <div class="register-data p-8">
-            <form action="">
-                <h2 class="font-links text-4xl font-bold">Registre-se</h2>
-                <p class="text-xs pt-2 text-gray-300">Caso não tenha uma conta, registre-se abaixo</p>
-
-                <input type="email" 
-                name="emailRegister"
-                id="emailRegister"
-                placeholder="Email"
-                autocomplete="off"
-                class="w-96 border-none rounded-md px-3 py-4 bg-gray-800 outline-none mt-6">
-
-                <input type="text" 
-                name="userRegister" 
-                id="userRegister"
-                placeholder="Usuário"
-                autocomplete="off"
-                class="w-96 border-none rounded-md px-3 py-4 bg-gray-800 outline-none mt-6">
-
-                <input type="password" 
-                name="passwordRegister" 
-                id="passwordRegister"
-                placeholder="Senha"
-                autocomplete="off"
-                class="w-96 border-none rounded-md px-3 py-4 bg-gray-800 outline-none mt-6">
-
-                <input type="password" 
-                name="Confirmpassword" 
-                id="Confirmpassword"
-                placeholder="Confirmar senha"
-                autocomplete="off"
-                class="w-96 border-none rounded-md px-3 py-4 bg-gray-800 outline-none mt-6">
-
-                <button class="btnSecondary mt-6 text-xl">Registre-se</button>
-
-                <div class="flex justify-between mt-4 p-8">
-                    <span class="text-xs text-gray-500">Já tem uma conta?</span>
-                    <a id="link-login" class="text-sm" href="#">Login</a>
-                </div>
-            </form>
-        </div>
-    </div>
+        <div class="login text-white flex mx-auto my-0 bg-gray-950 justify-center items-center text-center rounded-lg">
+            <div class="login-data p-8">
+                <form action="">
+                    <h2 class="font-links text-4xl font-bold">Login</h2>
+                    <p class="text-xs pt-2 text-gray-300">Se você tiver algum login, por favor insira abaixo</p>
     
+                    <input type="text" 
+                    name="userLogin" 
+                    id="userLogin"
+                    placeholder="Usuário"
+                    autocomplete="off"
+                    class="w-96 border-none rounded-md px-3 py-4 bg-gray-800 outline-none mt-8">
+    
+                    <input type="password" 
+                    name="passwordLogin" 
+                    id="passwordLogin"
+                    placeholder="Senha"
+                    autocomplete="off"
+                    class="w-96 border-none rounded-md px-3 py-4 bg-gray-800 outline-none mt-6">
+    
+                    <div class="ml-auto text-end pt-3 px-8">
+                        <a href="#" id="qstPass" class="text-xs text-gray-300">Esqueceu a senha?</a>
+                    </div>
+    
+                    <button class="btnSecondary mt-6 text-xl">Login</button>
+    
+                    <div class="flex justify-between mt-8 px-8">
+                        <span class="text-xs text-gray-500">Ainda não tem uma conta?</span>
+                        <a id="link-register" href="#" class="text-sm">Registre-se</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+        <div class="register mt-3 text-white hidden mx-auto my-0 bg-gray-950 justify-center items-center text-center rounded-lg">
+            <div class="register-data p-8">
+                <form action="">
+                    <h2 class="font-links text-4xl font-bold">Registre-se</h2>
+                    <p class="text-xs pt-2 text-gray-300">Caso não tenha uma conta, registre-se abaixo</p>
+    
+                    <input type="email" 
+                    name="emailRegister"
+                    id="emailRegister"
+                    placeholder="Email"
+                    autocomplete="off"
+                    class="w-96 border-none rounded-md px-3 py-4 bg-gray-800 outline-none mt-6">
+    
+                    <input type="text" 
+                    name="userRegister" 
+                    id="userRegister"
+                    placeholder="Usuário"
+                    autocomplete="off"
+                    class="w-96 border-none rounded-md px-3 py-4 bg-gray-800 outline-none mt-6">
+    
+                    <input type="password" 
+                    name="passwordRegister" 
+                    id="passwordRegister"
+                    placeholder="Senha"
+                    autocomplete="off"
+                    class="w-96 border-none rounded-md px-3 py-4 bg-gray-800 outline-none mt-6">
+    
+                    <input type="password" 
+                    name="Confirmpassword" 
+                    id="Confirmpassword"
+                    placeholder="Confirmar senha"
+                    autocomplete="off"
+                    class="w-96 border-none rounded-md px-3 py-4 bg-gray-800 outline-none mt-6">
+    
+                    <button class="btnSecondary mt-6 text-xl">Registre-se</button>
+    
+                    <div class="flex justify-between mt-4 p-8">
+                        <span class="text-xs text-gray-500">Já tem uma conta?</span>
+                        <a id="link-login" class="text-sm" href="#">Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
     <script type="module" src="../js/app.js"></script>
 </body>
 </html>

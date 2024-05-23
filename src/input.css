@@ -55,9 +55,10 @@ body {
     animation: animateLogin 1s;
 }
 
-.login > input:focus,
-.reguster > input:focus {
-    background-color: #2c2c2c;
+.login input:focus,
+.register input:focus {
+    background-color: #273c58;
+    border: 1px solid #d8d8d8;
 }
 
 #qstPass {
@@ -113,7 +114,7 @@ body {
     display: block;
     background-color: #000;
     margin-top: 5px;
-    animation: animateLink .3s;
+    animation: animateOpacity .3s;
 }
 
 article {
@@ -144,7 +145,7 @@ article {
     }
 }
 
-@keyframes animateLink {
+@keyframes animateOpacity {
     from {
         opacity: 0;
     }

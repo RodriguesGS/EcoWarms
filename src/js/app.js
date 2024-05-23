@@ -11,90 +11,88 @@ if (window.location.pathname.includes('login.html')) {
     document.querySelector("#link-login").addEventListener('click', showLogin);
 };
 
-// Página Principal
 
-if (window.location.pathname.includes('index.html')) {
+// Função dropDown
 
-    // Função dropDown
+const dropDown = document.querySelectorAll("#dropDown");
 
-    const dropDown = document.querySelectorAll("#dropDown");
+dropDown.forEach((btn) => {
+    btn.addEventListener("click", () => toggleDrop(btn));
+});
 
+document.addEventListener("click", (e) => {
     dropDown.forEach((btn) => {
-        btn.addEventListener("click", () => toggleDrop(btn));
+        const dropDownMenu = btn.nextElementSibling;
+        if (!btn.contains(e.target) && !dropDownMenu.contains(e.target)) {
+            dropDownMenu.classList.add("hidden");
+        };
     });
+});
 
-    document.addEventListener("click", (e) => {
-        dropDown.forEach((btn) => {
-            const dropDownMenu = btn.nextElementSibling;
-            if (!btn.contains(e.target) && !dropDownMenu.contains(e.target)) {
-                dropDownMenu.classList.add("hidden");
-            };
-        });
-    });
+// Fechar modal
 
-    // Fechar modal
+document.querySelector("#closeModal").addEventListener("click", closeModal);
 
-    document.querySelector("#closeModal").addEventListener("click", closeModal);
+// API Weather
 
-    // API Weather
+const inputSearh = document.querySelector("#search");
+const citySearch = document.querySelector("#searchAPI");
 
-    const inputSearh = document.querySelector("#search");
-    const citySearch = document.querySelector("#searchAPI");
+citySearch.addEventListener("click", async (e) => {
+    const cityName = e.target.value;
 
-    citySearch.addEventListener("click", async (e) => {
+    document.querySelector("#modal").classList.remove("hidden");
+
+    document.body.classList.toggle("modal-open");
+    
+    inputSearh.value = "";
+
+    showWeather(cityName);
+});
+
+inputSearh.addEventListener("keyup", (e) => {
+    if (e.code === "Enter") {
         const cityName = e.target.value;
 
         document.querySelector("#modal").classList.remove("hidden");
 
-        document.body.classList.toggle("modal-open");
-        
         inputSearh.value = "";
 
+        document.body.classList.toggle("modal-open");
+
         showWeather(cityName);
-    });
+    };
+});
 
-    inputSearh.addEventListener("keyup", e => {
-        if (e.code === "Enter") {
-            const cityName = e.target.value;
+// Carrossel
 
-            document.querySelector("#modal").classList.remove("hidden");
+document.querySelector("#prev").addEventListener("click", () => {
+    scrollCarrossel(-2000);
+});
 
-            inputSearh.value = "";
+document.querySelector("#next").addEventListener("click", () => {
+    scrollCarrossel(960);
+});
 
-            document.body.classList.toggle("modal-open");
+// Menu Questions
 
-            showWeather(cityName);
-        };
-    });
+const linksNav = document.querySelectorAll(".link-nav");
 
-    // Carrossel
+linksNav.forEach((link) => {
+    link.addEventListener("click", () => {
+        linksNav.forEach((item) => {
+            item.classList.remove("ativo");
+        });
 
-    document.querySelector("#prev").addEventListener("click", () => {
-        scrollCarrossel(-2000);
-    });
+        link.classList.add("ativo");
 
-    document.querySelector("#next").addEventListener("click", () => {
-        scrollCarrossel(960);
-    });
-
-    const linksNav = document.querySelectorAll(".link-nav");
-
-    linksNav.forEach((link) => {
-        link.addEventListener("click", () => {
-            linksNav.forEach((item) => {
-                item.classList.remove("ativo");
-            })
-
-            link.classList.add("ativo");
-
-            const article = document.querySelectorAll("article");
-            article.forEach((article) => {
-                article.classList.add("hidden")
-            })
-
-            const articleId = link.id + "-article";
-            const correspondingArticle = document.getElementById(articleId);
-            correspondingArticle.classList.remove("hidden");
+        const article = document.querySelectorAll("article");
+        article.forEach((article) => {
+            article.classList.add("hidden");
         })
-    })
-}
+
+        const articleId = link.id + "-article";
+        const correspondingArticle = document.getElementById(articleId);
+        correspondingArticle.classList.remove("hidden");
+    });
+});
