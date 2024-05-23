@@ -636,6 +636,10 @@ video {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .hidden {
   display: none;
 }
@@ -700,6 +704,10 @@ video {
   max-width: 28rem;
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -736,12 +744,20 @@ video {
   gap: 1.5rem;
 }
 
+.gap-7 {
+  gap: 1.75rem;
+}
+
 .overflow-x-hidden {
   overflow-x: hidden;
 }
 
 .rounded {
   border-radius: 0.25rem;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
 }
 
 .rounded-3xl {
@@ -772,6 +788,11 @@ video {
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .bg-gray-500 {
@@ -886,6 +907,10 @@ video {
   padding-bottom: 1rem;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
 .pb-3 {
   padding-bottom: 0.75rem;
 }
@@ -902,8 +927,16 @@ video {
   padding-right: 3rem;
 }
 
+.pt-1 {
+  padding-top: 0.25rem;
+}
+
 .pt-10 {
   padding-top: 2.5rem;
+}
+
+.pt-14 {
+  padding-top: 3.5rem;
 }
 
 .pt-2 {
@@ -1034,6 +1067,10 @@ video {
   transition-duration: 200ms;
 }
 
+.text-indent-1em {
+  text-indent: 1em;
+}
+
 body {
   background: #000;
   color: #111;
@@ -1115,9 +1152,53 @@ body {
   color: #fff;
 }
 
+.btnTerciary {
+  border: 2px solid #111;
+  background-color: transparent;
+  padding: 10px 50px;
+  border-radius: 15px;
+  transition: .3s;
+  font-weight: 600;
+}
+
+.btnTerciary:hover {
+  background-color: #111;
+  color: #fff;
+}
+
 #link-register:hover,
 #link-login:hover {
   text-decoration: underline;
+}
+
+.link-nav {
+  cursor: pointer;
+}
+
+.link-nav.ativo::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  display: block;
+  background-color: #000;
+  margin-top: 5px;
+  animation: animateLink .3s;
+}
+
+article {
+  animation: animateArticle .5s;
+}
+
+@keyframes animateArticle {
+  from {
+    opacity: 0;
+    transform: translate3d(-1000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @keyframes animateLogin {
@@ -1129,6 +1210,16 @@ body {
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes animateLink {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 

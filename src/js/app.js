@@ -76,4 +76,25 @@ if (window.location.pathname.includes('index.html')) {
     document.querySelector("#next").addEventListener("click", () => {
         scrollCarrossel(960);
     });
+
+    const linksNav = document.querySelectorAll(".link-nav");
+
+    linksNav.forEach((link) => {
+        link.addEventListener("click", () => {
+            linksNav.forEach((item) => {
+                item.classList.remove("ativo");
+            })
+
+            link.classList.add("ativo");
+
+            const article = document.querySelectorAll("article");
+            article.forEach((article) => {
+                article.classList.add("hidden")
+            })
+
+            const articleId = link.id + "-article";
+            const correspondingArticle = document.getElementById(articleId);
+            correspondingArticle.classList.remove("hidden");
+        })
+    })
 }
