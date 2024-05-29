@@ -50,8 +50,13 @@ body {
     background-color: #eee;
 }
 
-.login, .register {
+.login {
     max-width: 500px;
+    animation: animateLogin 1s;
+}
+
+.register {
+    max-width: 950px;
     animation: animateLogin 1s;
 }
 

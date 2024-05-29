@@ -8,14 +8,13 @@
     <title>Login</title>
 </head>
 <body id="login-page">
-    <div class="w-full h-screen bg-black bg-initial bg-fixed bg-cover bg-bottom pt-10">
+    <div class="w-full bg-black bg-initial h-screen bg-fixed bg-cover bg-bottom pt-10">
         <a href="../index.html" class="fixed top-15 left-20">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="#fff" class="w-10 h-8">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
             </svg>              
         </a>
-          
-
+        
         <div class="login text-white flex mx-auto my-0 bg-gray-950 justify-center items-center text-center rounded-lg">
             <div class="login-data p-8">
                 <form action="">
@@ -50,39 +49,43 @@
             </div>
         </div>
     
-        <div class="register mt-3 text-white hidden mx-auto my-0 bg-gray-950 justify-center items-center text-center rounded-lg">
-            <div class="register-data p-8">
+        <div class="register mt-10 hidden mx-auto my-0 text-white bg-gray-950 justify-center items-center text-center rounded-lg py-8">
+            <div class="register-data ">
                 <form action="">
                     <h2 class="font-links text-4xl font-bold">Registre-se</h2>
                     <p class="text-xs pt-2 text-gray-300">Caso não tenha uma conta, registre-se abaixo</p>
     
-                    <input type="email" 
-                    name="emailRegister"
-                    id="emailRegister"
-                    placeholder="Email"
-                    autocomplete="off"
-                    class="w-96 border-none rounded-md px-3 py-4 bg-gray-800 outline-none mt-6">
+                    <div class="left-data flex gap-6">
+                        <input type="email" 
+                        name="emailRegister"
+                        id="emailRegister"
+                        placeholder="Email"
+                        autocomplete="off"
+                        class="w-full border-none rounded-md px-3 py-4 bg-gray-800 outline-none mt-6">
+        
+                        <input type="text" 
+                        name="userRegister" 
+                        id="userRegister"
+                        placeholder="Usuário"
+                        autocomplete="off"
+                        class="w-full border-none rounded-md px-3 py-4 bg-gray-800 outline-none mt-6">
+                    </div>
     
-                    <input type="text" 
-                    name="userRegister" 
-                    id="userRegister"
-                    placeholder="Usuário"
-                    autocomplete="off"
-                    class="w-96 border-none rounded-md px-3 py-4 bg-gray-800 outline-none mt-6">
-    
-                    <input type="password" 
-                    name="passwordRegister" 
-                    id="passwordRegister"
-                    placeholder="Senha"
-                    autocomplete="off"
-                    class="w-96 border-none rounded-md px-3 py-4 bg-gray-800 outline-none mt-6">
-    
-                    <input type="password" 
-                    name="Confirmpassword" 
-                    id="Confirmpassword"
-                    placeholder="Confirmar senha"
-                    autocomplete="off"
-                    class="w-96 border-none rounded-md px-3 py-4 bg-gray-800 outline-none mt-6">
+                    <div class="right-data flex gap-6">
+                        <input type="password" 
+                        name="passwordRegister" 
+                        id="passwordRegister"
+                        placeholder="Senha"
+                        autocomplete="off"
+                        class="w-96 border-none rounded-md px-3 py-4 bg-gray-800 outline-none mt-6">
+        
+                        <input type="password" 
+                        name="Confirmpassword" 
+                        id="Confirmpassword"
+                        placeholder="Confirmar senha"
+                        autocomplete="off"
+                        class="w-96 border-none rounded-md px-3 py-4 bg-gray-800 outline-none mt-6">
+                    </div>
     
                     <button class="btnSecondary mt-6 text-xl">Registre-se</button>
     
