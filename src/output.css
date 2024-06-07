@@ -608,16 +608,24 @@ video {
   margin-right: 1.5rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mt-12 {
   margin-top: 3rem;
 }
 
-.mt-3 {
-  margin-top: 0.75rem;
+.mt-14 {
+  margin-top: 3.5rem;
 }
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .mt-6 {
@@ -626,10 +634,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
 }
 
 .block {
@@ -714,6 +718,10 @@ video {
 
 .max-w-md {
   max-width: 28rem;
+}
+
+.list-disc {
+  list-style-type: disc;
 }
 
 .grid-cols-2 {
@@ -1210,6 +1218,18 @@ body {
 
 article {
   animation: animateArticle .5s;
+}
+
+#ongs::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.link-org:hover {
+  text-decoration: underline;
 }
 
 @keyframes animateArticle {

@@ -126,6 +126,18 @@ article {
     animation: animateArticle .5s;
 }
 
+#ongs::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.link-org:hover {
+    text-decoration: underline;
+}
+
 @keyframes animateArticle {
     from {
         opacity: 0;
