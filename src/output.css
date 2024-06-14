@@ -620,6 +620,10 @@ video {
   margin-top: 3.5rem;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -650,6 +654,11 @@ video {
 
 .hidden {
   display: none;
+}
+
+.size-6 {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .h-12 {
@@ -718,6 +727,10 @@ video {
 
 .max-w-md {
   max-width: 28rem;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .list-disc {
@@ -980,6 +993,10 @@ video {
   padding-top: 1rem;
 }
 
+.pt-5 {
+  padding-top: 1.25rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1055,6 +1072,11 @@ video {
 .text-gray-300 {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .text-gray-500 {
@@ -1230,6 +1252,36 @@ article {
 
 .link-org:hover {
   text-decoration: underline;
+}
+
+.rede svg {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.footer-li ul li {
+  cursor: pointer;
+}
+
+.footer-li ul li::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 0%;
+  background-color: #fff;
+  transition: .2s;
+}
+
+.footer-li ul li:hover::after {
+  width: 80%;
+}
+
+#btnTop {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 @keyframes animateArticle {

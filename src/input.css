@@ -138,6 +138,36 @@ article {
     text-decoration: underline;
 }
 
+.rede svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.footer-li ul li {
+    cursor: pointer;
+}
+
+.footer-li ul li::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 0%;
+    background-color: #fff;
+    transition: .2s;
+}
+
+.footer-li ul li:hover::after {
+    width: 80%;
+}
+
+#btnTop {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 @keyframes animateArticle {
     from {
         opacity: 0;

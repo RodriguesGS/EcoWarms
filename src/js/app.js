@@ -96,3 +96,12 @@ linksNav.forEach((link) => {
         correspondingArticle.classList.remove("hidden");
     });
 });
+
+function topFunction() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
+document.querySelector("#btnTop").addEventListener("click", topFunction)
