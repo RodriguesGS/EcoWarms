@@ -105,3 +105,4 @@ function topFunction() {
   }
 
 document.querySelector("#btnTop").addEventListener("click", topFunction)
+
