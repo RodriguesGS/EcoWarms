@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "initial": "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/bg-initial.jpg')"
+        "initial": "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/bg-initial.jpg')"
       },
       fontFamily: {
         "logo": ["Montserrat", 'sans-serif'],
@@ -21,6 +21,7 @@ module.exports = {
         '.text-indent-2em': {
           textIndent: '2em',
         },
+        // Adicione mais utilitários conforme necessário
       }
 
       addUtilities(newUtilities, ['responsive', 'hover'])
