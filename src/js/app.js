@@ -1,5 +1,5 @@
 import { showLogin, showRegister } from "./changeLogin.js";
-import { toggleDrop } from "./dropDown.js";
+import { toggleDrop } from "/src/js/dropdown.js";
 import { closeModal } from "./modal.js";
 import { showWeather } from "./weather.js";
 import { scrollCarrossel } from "./carrossel.js";
@@ -10,7 +10,6 @@ if (window.location.pathname.includes('login.html')) {
     document.querySelector("#link-register").addEventListener('click', showRegister);
     document.querySelector("#link-login").addEventListener('click', showLogin);
 };
-
 
 // Função dropDown
 
